@@ -1,4 +1,4 @@
-package net.sebitzu.lolflash.item;
+package net.sebitzu.summoners_rift.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
@@ -8,8 +8,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
-import net.sebitzu.lolflash.LOLFlash;
-import net.sebitzu.lolflash.item.custom.FlashItem;
+import net.sebitzu.summoners_rift.SummonersRift;
+import net.sebitzu.summoners_rift.item.custom.FlashItem;
 
 import java.util.function.Function;
 
@@ -18,7 +18,7 @@ public class ModItems {
     public static final Item FLASH = register("flash", new Item.Settings(), FlashItem::new);
 
     private static RegistryKey<Item> keyOf(String id) {
-        return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(LOLFlash.MOD_ID, id));
+        return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(SummonersRift.MOD_ID, id));
     }
 
     public static Item register(String id, Item.Settings settings, Function<Item.Settings, Item> factory) {
@@ -29,7 +29,7 @@ public class ModItems {
     }
 
     public static void registerModItem() {
-        LOLFlash.LOGGER.info("Registering ModItems for " + LOLFlash.MOD_ID);
+        SummonersRift.LOGGER.info("Registering ModItems for " + SummonersRift.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> {
             entries.add(FLASH);

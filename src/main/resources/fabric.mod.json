@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "lolflash",
+	"id": "summoners_rift",
 	"version": "${version}",
-	"name": "LOL Flash",
-	"description": "This is an implementation of the Flash Summoner Spell in the popular game League of Legends",
+	"name": "Summoners Rift",
+	"description": "This is an implementation of items from Summoners Rift in the popular game League of Legends",
 	"authors": [
 		"Sebitzu"
 	],
@@ -12,21 +12,21 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/lolflash/icon.png",
+	"icon": "assets/summoners_rift/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.sebitzu.lolflash.LOLFlash"
+          "net.sebitzu.summoners_rift.SummonersRift"
 		],
 		"fabric-datagen": [
-			"net.sebitzu.lolflash.LOLFlashDataGenerator"
+			"net.sebitzu.summoners_rift.SummonersRiftDataGenerator"
 		],
 		"client": [
-			"net.sebitzu.lolflash.LOLFlashClient"
+			"net.sebitzu.summoners_rift.SummonersRiftClient"
 		]
 	},
 	"mixins": [
-		"lolflash.mixins.json"
+		"summoners_rift.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.10",

@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "lolflash:item/flash"
+    "model": "summoners_rift:item/flash"
   }
 }

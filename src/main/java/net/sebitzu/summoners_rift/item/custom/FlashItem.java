@@ -1,4 +1,4 @@
-package net.sebitzu.lolflash.item.custom;
+package net.sebitzu.summoners_rift.item.custom;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -11,7 +11,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import net.sebitzu.lolflash.sound.ModSounds;
+import net.sebitzu.summoners_rift.sound.ModSounds;
 
 
 public class FlashItem extends Item {
