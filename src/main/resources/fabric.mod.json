@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "lolflash",
+	"version": "${version}",
+	"name": "LOL Flash",
+	"description": "This is an implementation of the Flash Summoner Spell in the popular game League of Legends",
+	"authors": [
+		"Sebitzu"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/lolflash/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.sebitzu.lolflash.LOLFlash"
+		],
+		"fabric-datagen": [
+			"net.sebitzu.lolflash.LOLFlashDataGenerator"
+		],
+		"client": [
+			"net.sebitzu.lolflash.LOLFlashClient"
+		]
+	},
+	"mixins": [
+		"lolflash.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
