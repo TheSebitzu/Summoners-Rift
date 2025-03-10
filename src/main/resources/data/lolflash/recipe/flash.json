@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "minecraft:blaze_powder",
+    "G": "minecraft:glowstone_dust",
+    "E": "minecraft:ender_pearl"
+  },
+  "pattern": [
+    "GBG",
+    "BEB",
+    "GBG"
+  ],
+  "result": {
+    "id": "lolflash:flash",
+    "count": 4
+  }
+}
