@@ -10,12 +10,15 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.sebitzu.summoners_rift.SummonersRift;
 import net.sebitzu.summoners_rift.item.custom.FlashItem;
+import net.sebitzu.summoners_rift.item.custom.IgniteItem;
 
 import java.util.function.Function;
 
 public class ModItems {
 
     public static final Item FLASH = register("flash", new Item.Settings(), FlashItem::new);
+    public static final Item IGNITE = register("ignite", new Item.Settings(), IgniteItem::new);
+
 
     private static RegistryKey<Item> keyOf(String id) {
         return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(SummonersRift.MOD_ID, id));
@@ -33,6 +36,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> {
             entries.add(FLASH);
+            entries.add(IGNITE);
 
         });
     }
