@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "#": "minecraft:flint_and_steel"
-  },
+  "ingredients": [
+    "minecraft:flint_and_steel"
+  ],
   "result": {
     "id": "summoners_rift:ignite",
     "count": 2

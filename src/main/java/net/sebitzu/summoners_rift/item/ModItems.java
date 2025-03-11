@@ -9,6 +9,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.sebitzu.summoners_rift.SummonersRift;
+import net.sebitzu.summoners_rift.item.custom.ExhaustItem;
 import net.sebitzu.summoners_rift.item.custom.FlashItem;
 import net.sebitzu.summoners_rift.item.custom.IgniteItem;
 
@@ -18,6 +19,7 @@ public class ModItems {
 
     public static final Item FLASH = register("flash", new Item.Settings(), FlashItem::new);
     public static final Item IGNITE = register("ignite", new Item.Settings(), IgniteItem::new);
+    public static final Item EXHAUST = register("exhaust", new Item.Settings(), ExhaustItem::new);
 
 
     private static RegistryKey<Item> keyOf(String id) {
@@ -37,6 +39,7 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> {
             entries.add(FLASH);
             entries.add(IGNITE);
+            entries.add(EXHAUST);
 
         });
     }

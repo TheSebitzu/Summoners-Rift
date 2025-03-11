@@ -24,7 +24,7 @@ public class IgniteItem extends Item {
             // Set any entity on fire
             entity.setFireTicks(ticks_to_burn);
 
-            // If it's a player also set the hungerbar
+            // If it's a player also set the hunger bar
             if (entity instanceof PlayerEntity player_character) {
                 int food_level = player_character.getHungerManager().getFoodLevel();
                 float saturation_level = player_character.getHungerManager().getSaturationLevel();
@@ -44,7 +44,7 @@ public class IgniteItem extends Item {
                 });
             }
 
-
+            // Add cooldown and consumes a piece on use
             player.getItemCooldownManager().set(stack, (int) (ticks_to_burn*1.5f));
             stack.decrement(1);
         }
