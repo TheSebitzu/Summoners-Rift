@@ -17,15 +17,15 @@ public class GhostItem extends Item {
     @Override
     public ActionResult use(World world, PlayerEntity user, Hand hand) {
 
-        int ticks_to_ghost = 200; // 200 ticks (10 sec)
+        int ticksToGhost = 200; // 200 ticks (10 sec)
 
         if (!world.isClient()) {
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, ticks_to_ghost, 1));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, ticksToGhost, 1));
         }
 
         ItemStack stack = user.getStackInHand(hand);
         stack.decrement(1);
-        user.getItemCooldownManager().set(stack, (int) (ticks_to_ghost*1.5f));
+        user.getItemCooldownManager().set(stack, (int) (ticksToGhost*1.5f));
 
 
         return ActionResult.SUCCESS;

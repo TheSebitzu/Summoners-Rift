@@ -20,6 +20,7 @@ public class ModItems {
     public static final Item EXHAUST = register("exhaust", new Item.Settings(), ExhaustItem::new);
     public static final Item GHOST = register("ghost", new Item.Settings(), GhostItem::new);
     public static final Item CLEANSE = register("cleanse", new Item.Settings(), CleanseItem::new);
+    public static final Item HEAL = register("heal", new Item.Settings(), HealItem::new);
 
 
     private static RegistryKey<Item> keyOf(String id) {
@@ -42,7 +43,7 @@ public class ModItems {
             entries.add(EXHAUST);
             entries.add(GHOST);
             entries.add(CLEANSE);
-
+            entries.add(HEAL);
         });
     }
 }

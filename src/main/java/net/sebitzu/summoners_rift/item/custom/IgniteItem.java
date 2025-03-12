@@ -17,35 +17,35 @@ public class IgniteItem extends Item {
     @Override
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity player, LivingEntity entity, Hand hand) {
 
-        int ticks_to_burn = 200; // 200 ticks (10 sec)
+        int ticksToBurn = 200; // 200 ticks (10 sec)
 
         if (!entity.getWorld().isClient)
         {
             // Set any entity on fire
-            entity.setFireTicks(ticks_to_burn);
+            entity.setFireTicks(ticksToBurn);
 
             // If it's a player also set the hunger bar
-            if (entity instanceof PlayerEntity player_character) {
-                int food_level = player_character.getHungerManager().getFoodLevel();
-                float saturation_level = player_character.getHungerManager().getSaturationLevel();
-                player_character.getHungerManager().setFoodLevel(10);
-                player_character.getHungerManager().setSaturationLevel(0);
+            if (entity instanceof PlayerEntity playerCharacter) {
+                int foodLevel = playerCharacter.getHungerManager().getFoodLevel();
+                float saturationLevel = playerCharacter.getHungerManager().getSaturationLevel();
+                playerCharacter.getHungerManager().setFoodLevel(10);
+                playerCharacter.getHungerManager().setSaturationLevel(0);
 
                 CompletableFuture<Void> function = CompletableFuture.runAsync(() -> {
                    try {
-                       Thread.sleep(ticks_to_burn*50);
+                       Thread.sleep(ticksToBurn *50);
                    } catch (InterruptedException e) {
                        e.printStackTrace();
                    }
                 });
                 function.thenRun(() -> {
-                   player_character.getHungerManager().setFoodLevel(food_level);
-                   player_character.getHungerManager().setSaturationLevel(saturation_level);
+                   playerCharacter.getHungerManager().setFoodLevel(foodLevel);
+                   playerCharacter.getHungerManager().setSaturationLevel(saturationLevel);
                 });
             }
 
             // Add cooldown and consumes a piece on use
-            player.getItemCooldownManager().set(stack, (int) (ticks_to_burn*1.5f));
+            player.getItemCooldownManager().set(stack, (int) (ticksToBurn *1.5f));
             stack.decrement(1);
         }
         return ActionResult.SUCCESS;
