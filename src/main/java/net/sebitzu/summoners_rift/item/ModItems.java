@@ -9,10 +9,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.sebitzu.summoners_rift.SummonersRift;
-import net.sebitzu.summoners_rift.item.custom.ExhaustItem;
-import net.sebitzu.summoners_rift.item.custom.FlashItem;
-import net.sebitzu.summoners_rift.item.custom.GhostItem;
-import net.sebitzu.summoners_rift.item.custom.IgniteItem;
+import net.sebitzu.summoners_rift.item.custom.*;
 
 import java.util.function.Function;
 
@@ -22,6 +19,7 @@ public class ModItems {
     public static final Item IGNITE = register("ignite", new Item.Settings(), IgniteItem::new);
     public static final Item EXHAUST = register("exhaust", new Item.Settings(), ExhaustItem::new);
     public static final Item GHOST = register("ghost", new Item.Settings(), GhostItem::new);
+    public static final Item CLEANSE = register("cleanse", new Item.Settings(), CleanseItem::new);
 
 
     private static RegistryKey<Item> keyOf(String id) {
@@ -43,6 +41,7 @@ public class ModItems {
             entries.add(IGNITE);
             entries.add(EXHAUST);
             entries.add(GHOST);
+            entries.add(CLEANSE);
 
         });
     }
