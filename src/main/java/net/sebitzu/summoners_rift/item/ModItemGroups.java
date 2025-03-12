@@ -23,6 +23,7 @@ public class ModItemGroups {
                         entries.add(ModItems.GHOST);
                         entries.add(ModItems.CLEANSE);
                         entries.add(ModItems.HEAL);
+                        entries.add(ModItems.BARRIER);
 
                     }).build());
 

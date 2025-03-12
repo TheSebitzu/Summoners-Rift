@@ -19,6 +19,7 @@ public class ModItems {
     public static final Item GHOST = register("ghost", new Item.Settings(), GhostItem::new);
     public static final Item CLEANSE = register("cleanse", new Item.Settings(), CleanseItem::new);
     public static final Item HEAL = register("heal", new Item.Settings(), HealItem::new);
+    public static final Item BARRIER = register("barrier", new Item.Settings(), BarrierItem::new);
     public static final Item LOL_LOGO = register("lol_logo", new Item.Settings(), Item::new);
 
 
