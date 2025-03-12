@@ -4,8 +4,10 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.sebitzu.summoners_rift.sound.ModSounds;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -43,6 +45,8 @@ public class IgniteItem extends Item {
                    playerCharacter.getHungerManager().setSaturationLevel(saturationLevel);
                 });
             }
+
+            player.getWorld().playSound(null, player.getPos().x, player.getPos().y, player.getPos().z, ModSounds.IGNITE_USE, SoundCategory.PLAYERS, 1.0F, 1.0F);
 
             // Add cooldown and consumes a piece on use
             player.getItemCooldownManager().set(stack, (int) (ticksToBurn *1.5f));

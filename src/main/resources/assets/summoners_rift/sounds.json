@@ -1,8 +1,50 @@
 {
-  "flash_use": {
-    "subtitle": "Used Flash",
+  "barrier_use": {
+    "subtitle": "Used Barrier",
     "sounds": [
-      "summoners_rift:flash_use"
+      "summoners_rift:barrier_use"
     ]
-  }
+  },
+  "cleanse_use": {
+      "subtitle": "Used Cleanse",
+      "sounds": [
+        "summoners_rift:cleanse_use"
+      ]
+    },
+  "exhaust_use": {
+      "subtitle": "Used Exhaust",
+      "sounds": [
+        "summoners_rift:exhaust_use"
+      ]
+    },
+  "flash_use": {
+      "subtitle": "Used Flash",
+      "sounds": [
+        "summoners_rift:flash_use"
+      ]
+    },
+  "ghost_use": {
+      "subtitle": "Used Ghost",
+      "sounds": [
+        "summoners_rift:ghost_use"
+      ]
+    },
+  "heal_use": {
+      "subtitle": "Used Heal",
+      "sounds": [
+        "summoners_rift:heal_use"
+      ]
+    },
+  "ignite_use": {
+      "subtitle": "Used Ignite",
+      "sounds": [
+        "summoners_rift:ignite_use"
+      ]
+    },
+  "smite_use": {
+      "subtitle": "Used Smite",
+      "sounds": [
+        "summoners_rift:smite_use"
+      ]
+    }
 }

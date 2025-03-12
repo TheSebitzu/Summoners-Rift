@@ -5,9 +5,11 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
+import net.sebitzu.summoners_rift.sound.ModSounds;
 
 public class GhostItem extends Item {
     public GhostItem(Settings settings) {
@@ -22,6 +24,8 @@ public class GhostItem extends Item {
         if (!world.isClient()) {
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, ticksToGhost, 1));
         }
+
+        world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSounds.GHOST_USE, SoundCategory.PLAYERS, 1.0F, 1.0F);
 
         ItemStack stack = user.getStackInHand(hand);
         stack.decrement(1);
