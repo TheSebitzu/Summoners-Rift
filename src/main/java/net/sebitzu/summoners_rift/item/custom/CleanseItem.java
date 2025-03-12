@@ -17,7 +17,7 @@ public class CleanseItem extends Item {
     @Override
     public ActionResult use(World world, PlayerEntity user, Hand hand) {
 
-        if (!world.isClient()) {
+        if (!world.isClient() && !user.getItemCooldownManager().isCoolingDown(user.getStackInHand(hand))) {
             int tick_cooldown = 200; // 200 ticks (10 sec)
 
             user.clearStatusEffects();

@@ -21,7 +21,7 @@ public class GhostItem extends Item {
 
         int ticksToGhost = 200; // 200 ticks (10 sec)
 
-        if (!world.isClient()) {
+        if (!world.isClient() && !user.getItemCooldownManager().isCoolingDown(user.getStackInHand(hand))) {
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, ticksToGhost, 1));
         }
 

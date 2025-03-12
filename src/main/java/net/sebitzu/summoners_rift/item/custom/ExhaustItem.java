@@ -20,7 +20,7 @@ public class ExhaustItem extends Item {
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity player, LivingEntity entity, Hand hand) {
         int ticks_to_exhaust = 200; // 200 ticks (10 sec)
 
-        if (!entity.getWorld().isClient)
+        if (!entity.getWorld().isClient && !player.getItemCooldownManager().isCoolingDown(stack))
         {
             // Adds exhaust to target entity
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, ticks_to_exhaust, 1));

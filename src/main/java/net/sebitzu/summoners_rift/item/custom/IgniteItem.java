@@ -21,7 +21,7 @@ public class IgniteItem extends Item {
 
         int ticksToBurn = 200; // 200 ticks (10 sec)
 
-        if (!entity.getWorld().isClient)
+        if (!entity.getWorld().isClient && !player.getItemCooldownManager().isCoolingDown(stack))
         {
             // Set any entity on fire
             entity.setFireTicks(ticksToBurn);

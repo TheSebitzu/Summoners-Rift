@@ -34,41 +34,39 @@ public class FlashItem extends Item {
     public ActionResult use(World world, PlayerEntity player, Hand hand) {
         ItemStack itemStack = player.getStackInHand(hand);
 
-        if (!world.isClient) {
-            if (!player.getItemCooldownManager().isCoolingDown(itemStack)) {
+        if (!world.isClient && !player.getItemCooldownManager().isCoolingDown(player.getStackInHand(hand))) {
 
-                // Direction looking
-                Vec3d direction = player.getRotationVec(1);
-                direction = new Vec3d(direction.x, 0, direction.z);
+            // Direction looking
+            Vec3d direction = player.getRotationVec(1);
+            direction = new Vec3d(direction.x, 0, direction.z);
 
-                // Player pos
-                int tpDistance = 5;
+            // Player pos
+            int tpDistance = 5;
 
-                // For each dist from 5 to 0, in steps of .25
-                for (float i = tpDistance; i >= 0; i-= 0.25f) {
-                    Vec3d playerPos = player.getPos();
+            // For each dist from 5 to 0, in steps of .25
+            for (float i = tpDistance; i >= 0; i-= 0.25f) {
+                Vec3d playerPos = player.getPos();
 
-                    // Find where legs, head and aboveHead would be, don't change the y
-                    Vec3d legs = playerPos.add(direction.multiply(i));
-                    legs = new Vec3d(legs.x, playerPos.y, legs.z);
-                    Vec3d head = legs.add(0, 1, 0);
+                // Find where legs, head and aboveHead would be, don't change the y
+                Vec3d legs = playerPos.add(direction.multiply(i));
+                legs = new Vec3d(legs.x, playerPos.y, legs.z);
+                Vec3d head = legs.add(0, 1, 0);
 
-                    // Check same y
-                    if (world.isSpaceEmpty(player, new Box(legs.x - 0.3, legs.y, legs.z - 0.3, legs.x + 0.3, legs.y + 2, legs.z + 0.3))) {
-                        player.requestTeleport(legs.x, legs.y, legs.z);
-                        particlesAndSounds(playerPos, direction, legs, world);
-                        break;
-                    }
-                    // Check y+1
-                    else if (world.isSpaceEmpty(player, new Box(head.x - 0.3, head.y, head.z - 0.3, head.x + 0.3, head.y + 2, head.z + 0.3))) {
-                        player.requestTeleport(head.x, head.y, head.z);
-                        particlesAndSounds(playerPos, direction, head, world);
-                        break;
-                    }
+                // Check same y
+                if (world.isSpaceEmpty(player, new Box(legs.x - 0.3, legs.y, legs.z - 0.3, legs.x + 0.3, legs.y + 2, legs.z + 0.3))) {
+                    player.requestTeleport(legs.x, legs.y, legs.z);
+                    particlesAndSounds(playerPos, direction, legs, world);
+                    break;
                 }
-                itemStack.decrement(1);
-                player.getItemCooldownManager().set(itemStack, 20); // 20 ticks (1 sec)
+                // Check y+1
+                else if (world.isSpaceEmpty(player, new Box(head.x - 0.3, head.y, head.z - 0.3, head.x + 0.3, head.y + 2, head.z + 0.3))) {
+                    player.requestTeleport(head.x, head.y, head.z);
+                    particlesAndSounds(playerPos, direction, head, world);
+                    break;
+                }
             }
+            itemStack.decrement(1);
+            player.getItemCooldownManager().set(itemStack, 20); // 20 ticks (1 sec)
 
         }
 

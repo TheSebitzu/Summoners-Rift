@@ -24,6 +24,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CLEANSE);
                         entries.add(ModItems.HEAL);
                         entries.add(ModItems.BARRIER);
+                        entries.add(ModItems.SMITE);
 
                     }).build());
 

@@ -19,7 +19,7 @@ public class BarrierItem extends Item {
     @Override
     public ActionResult use(World world, PlayerEntity user, Hand hand) {
 
-        if (!world.isClient()) {
+        if (!world.isClient() && !user.getItemCooldownManager().isCoolingDown(user.getStackInHand(hand))) {
             int tick_to_barrier = 50; // 200 ticks (10 sec)
 
 

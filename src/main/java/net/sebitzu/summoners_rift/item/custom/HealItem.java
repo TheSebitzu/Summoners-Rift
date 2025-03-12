@@ -26,7 +26,7 @@ public class HealItem extends Item {
         int healAmount = 3; // 1.5 hearts
         int tickCooldown = 200; // 200 ticks (10 sec)
 
-        if (!world.isClient()) {
+        if (!world.isClient() && !user.getItemCooldownManager().isCoolingDown(user.getStackInHand(hand))) {
             Vec3d playerPos = user.getPos();
             List<PlayerEntity> nearbyPlayers = world.getEntitiesByClass(PlayerEntity.class,
                     new Box(playerPos.x - healRadius, playerPos.y - healRadius, playerPos.z - healRadius,
