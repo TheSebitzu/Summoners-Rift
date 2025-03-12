@@ -2,6 +2,7 @@ package net.sebitzu.summoners_rift;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.sebitzu.summoners_rift.item.ModItemGroups;
 import net.sebitzu.summoners_rift.item.ModItems;
 import net.sebitzu.summoners_rift.sound.ModSounds;
 import org.slf4j.Logger;
@@ -15,5 +16,6 @@ public class SummonersRift implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItem();
 		ModSounds.registerSounds();
+		ModItemGroups.registerItemGroups();
 	}
 }
