@@ -235,20 +235,20 @@ This mod is an implementation of summoner spells in the popular game [League of 
 
 Below are demonstration videos for each Summoner Spell item:
 
-| Spell    | Video |
-|----------|-------|
-| **Barrier** <img src="src/main/resources/assets/summoners_rift/textures/item/barrier.png" height="18" alt="Barrier icon in showcase table"/> | <video src="showcase_videos/barrier.mp4" width="300" autoplay loop muted alt="Barrier video">Sorry, your browser doesn't support embedded videos. [Download video](showcase_videos/barrier.mp4).</video> |
-| **Cleanse** <img src="src/main/resources/assets/summoners_rift/textures/item/cleanse.png" height="18" alt="Cleanse icon in showcase table"/> | <video src="showcase_videos/cleanse.mp4" width="300" autoplay loop muted alt="Cleanse video">Sorry, your browser doesn't support embedded videos. [Download video](showcase_videos/cleanse.mp4).</video> |
-| **Exhaust** <img src="src/main/resources/assets/summoners_rift/textures/item/exhaust.png" height="18" alt="Exhaust icon in showcase table"/> | <video src="showcase_videos/exhaust.mp4" width="300" autoplay loop muted alt="Exhaust video">Sorry, your browser doesn't support embedded videos. [Download video](showcase_videos/exhaust.mp4).</video> |
-| **Flash** <img src="src/main/resources/assets/summoners_rift/textures/item/flash.png" height="18" alt="Flash icon in showcase table"/> | <video src="showcase_videos/flash.mp4" width="300" autoplay loop muted alt="Flash video">Sorry, your browser doesn't support embedded videos. [Download video](showcase_videos/flash.mp4).</video> |
-| **Flash (through blocks)** <img src="src/main/resources/assets/summoners_rift/textures/item/flash.png" height="18" alt="Flash icon in showcase table"/> | <video src="showcase_videos/flash_through_blocks.mp4" width="300" autoplay loop muted alt="Flash through blocks video">Sorry, your browser doesn't support embedded videos. [Download video](showcase_videos/flash_through_blocks.mp4).</video> |
-| **Ghost** <img src="src/main/resources/assets/summoners_rift/textures/item/ghost.png" height="18" alt="Ghost icon in showcase table"/> | <video src="showcase_videos/ghost.mp4" width="300" autoplay loop muted alt="Ghost video">Sorry, your browser doesn't support embedded videos. [Download video](showcase_videos/ghost.mp4).</video> |
-| **Heal** <img src="src/main/resources/assets/summoners_rift/textures/item/heal.png" height="18" alt="Heal icon in showcase table"/> | <video src="showcase_videos/heal1.mp4" width="300" autoplay loop muted alt="Heal video (single player)">Sorry, your browser doesn't support embedded videos. [Download video](showcase_videos/heal1.mp4).</video> |
-| **Heal (2nd player)** <img src="src/main/resources/assets/summoners_rift/textures/item/heal.png" height="18" alt="Heal icon in showcase table"/> | <video src="showcase_videos/heal2.mp4" width="300" autoplay loop muted alt="Heal video (two players)">Sorry, your browser doesn't support embedded videos. [Download video](showcase_videos/heal2.mp4).</video> |
-| **Ignite** <img src="src/main/resources/assets/summoners_rift/textures/item/ignite.png" height="18" alt="Ignite icon in showcase table"/> | <video src="showcase_videos/ignite.mp4" width="300" autoplay loop muted alt="Ignite video">Sorry, your browser doesn't support embedded videos. [Download video](showcase_videos/ignite.mp4).</video> |
-| **Smite** <img src="src/main/resources/assets/summoners_rift/textures/item/smite.png" height="18" alt="Smite icon in showcase table"/> | <video src="showcase_videos/smite.mp4" width="300" autoplay loop muted alt="Smite video">Sorry, your browser doesn't support embedded videos. [Download video](showcase_videos/smite.mp4).</video> |
+| Spell    | Preview |
+|----------|---------|
+| **Barrier** <img src="src/main/resources/assets/summoners_rift/textures/item/barrier.png" height="18" alt="Barrier icon in showcase table"/> | <img src="showcase_videos/barrier.gif" width="300" alt="Barrier GIF"/> |
+| **Cleanse** <img src="src/main/resources/assets/summoners_rift/textures/item/cleanse.png" height="18" alt="Cleanse icon in showcase table"/> | <img src="showcase_videos/cleanse.gif" width="300" alt="Cleanse GIF"/> |
+| **Exhaust** <img src="src/main/resources/assets/summoners_rift/textures/item/exhaust.png" height="18" alt="Exhaust icon in showcase table"/> | <img src="showcase_videos/exhaust.gif" width="300" alt="Exhaust GIF"/> |
+| **Flash** <img src="src/main/resources/assets/summoners_rift/textures/item/flash.png" height="18" alt="Flash icon in showcase table"/> | <img src="showcase_videos/flash.gif" width="300" alt="Flash GIF"/> |
+| **Flash (through blocks)** <img src="src/main/resources/assets/summoners_rift/textures/item/flash.png" height="18" alt="Flash icon in showcase table"/> | <img src="showcase_videos/flash_through_blocks.gif" width="300" alt="Flash Through Blocks GIF"/> |
+| **Ghost** <img src="src/main/resources/assets/summoners_rift/textures/item/ghost.png" height="18" alt="Ghost icon in showcase table"/> | <img src="showcase_videos/ghost.gif" width="300" alt="Ghost GIF"/> |
+| **Heal** <img src="src/main/resources/assets/summoners_rift/textures/item/heal.png" height="18" alt="Heal icon in showcase table"/> | <img src="showcase_videos/heal1.gif" width="300" alt="Heal GIF"/> |
+| **Heal (2nd player)** <img src="src/main/resources/assets/summoners_rift/textures/item/heal.png" height="18" alt="Heal icon in showcase table"/> | <img src="showcase_videos/heal2.gif" width="300" alt="Heal 2nd Player GIF"/> |
+| **Ignite** <img src="src/main/resources/assets/summoners_rift/textures/item/ignite.png" height="18" alt="Ignite icon in showcase table"/> | <img src="showcase_videos/ignite.gif" width="300" alt="Ignite GIF"/> |
+| **Smite** <img src="src/main/resources/assets/summoners_rift/textures/item/smite.png" height="18" alt="Smite icon in showcase table"/> | <img src="showcase_videos/smite.gif" width="300" alt="Smite GIF"/> |
 
-> *Note*: If videos do not appear, you can download them directly from the [`showcase_videos`](showcase_videos) directory.
+> *Note*: If GIFs do not appear, you can download them directly from the [`showcase_videos`](showcase_videos) directory.
 
 ---
 
